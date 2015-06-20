@@ -14,7 +14,7 @@
             <field name="OP">LT</field>
             <value name="A">
               <block type="sensor_object" id="50">
-                <field name="OBJECT">LEFTFRONT</field>
+                <field name="OBJECT">RIGHTSIDE</field>
               </block>
             </value>
             <value name="B">
@@ -25,7 +25,11 @@
           </block>
         </value>
         <statement name="DO0">
-          <block type="movement_left" id="115"></block>
+          <block type="movement_right" id="179">
+            <next>
+              <block type="movement_forward" id="189"></block>
+            </next>
+          </block>
         </statement>
         <value name="IF1">
           <block type="logic_compare" id="155" inline="true">
@@ -43,7 +47,11 @@
           </block>
         </value>
         <statement name="DO1">
-          <block type="movement_left" id="158"></block>
+          <block type="movement_right" id="190">
+            <next>
+              <block type="movement_forward" id="191"></block>
+            </next>
+          </block>
         </statement>
         <statement name="ELSE">
           <block type="movement_forward" id="86"></block>
